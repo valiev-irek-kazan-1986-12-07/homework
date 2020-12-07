@@ -14,6 +14,9 @@ class MyHashMapTest {
         hashMap.put(1, "First");
         myHashMap.put(2, "Second");
         hashMap.put(2, "Second");
+        myHashMap.put(null, "ABs");
+        hashMap.put(null, "ABs");
+        assertEquals(hashMap.get(null), myHashMap.get(null));
         assertEquals(hashMap.get(1), myHashMap.get(1));
         assertEquals(hashMap.get(2), myHashMap.get(2));
     }
@@ -60,10 +63,15 @@ class MyHashMapTest {
         HashMap<Integer, String> hashMap = new HashMap<>();
         myHashMap.put(1, "First");
         hashMap.put(1, "First");
+        myHashMap.put(null, "First");
+        hashMap.put(null, "First");
+        myHashMap.remove(null);
+        hashMap.remove(null);
         myHashMap.put(2, "Second");
         hashMap.put(2, "Second");
         myHashMap.remove(1);
         hashMap.remove(1);
+        assertEquals(hashMap.containsKey(null), myHashMap.containsKey(null));
         assertEquals(hashMap.containsKey(1), myHashMap.containsKey(1));
         assertEquals(hashMap.remove(2), myHashMap.remove(2));
     }
