@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  maven:
+    image: hmw9:v1
+    ports:
+    - 8080:8080
+    volumes:
+    - C:/Users/Valiev/Desktop/innopolis/homework/homework18/src/main/resources:/var/lib/not_found
